@@ -1,0 +1,41 @@
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
+
+  <Identity Name="AtsFlow"
+            Publisher="CN=AtsFlow"
+            Version="1.0.0.0"
+            ProcessorArchitecture="x64" />
+
+  <Properties>
+    <DisplayName>AtsFlow</DisplayName>
+    <PublisherDisplayName>Ats</PublisherDisplayName>
+    <Logo>assets\icon-256.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.22621.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="tr-tr" />
+  </Resources>
+
+  <Applications>
+    <Application Id="AtsFlowApp"
+                 Executable="AtsFlow.exe"
+                 EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        DisplayName="AtsFlow"
+        Description="Yerel ag muzik ve dosya akisi"
+        BackgroundColor="#0f1117"
+        Square150x150Logo="assets\icon-256.png"
+        Square44x44Logo="assets\icon-48.png" />
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>
